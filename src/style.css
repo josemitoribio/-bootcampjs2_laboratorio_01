@@ -3,7 +3,7 @@
 
 *{
     box-sizing: border-box;
-    max-width: 1280px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 header {
@@ -29,7 +29,6 @@ header {
   }
 
 .text-menu a{
-    font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     text-decoration: none;
     color: #212429;
@@ -50,7 +49,6 @@ header {
   }
    
 h1{
-    font-family: 'Montserrat', sans-serif;
     font-size: 32px;
     font-weight: 700;
     text-align: left;
@@ -60,9 +58,10 @@ h1{
 .grid {
     display: grid;
     gap: 4rem;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2fr;
     padding: 2rem;
-    max-width: 1000px;
+    max-width: 1280px;
     margin: 0 auto;
   }
 
@@ -85,7 +84,6 @@ h1{
     display: flex;
     justify-content: space-between;
     margin-top: 8px;
-    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
 }
 
@@ -106,7 +104,6 @@ footer {
   }
 
 .footer-links a{
-    font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     text-decoration: none;
     color: #ffffff;
@@ -129,17 +126,19 @@ footer {
     padding: 10px;
   }
 
-@media (max-width: 427px) {
+@media (max-width: 920px) {
     
     header {
-        position: sticky;
-        z-index: 9;
         background-color: #ffff;
         display: flex;
         justify-content:center;
         align-items: center;
         border-bottom:solid 1px grey;
       }
+
+    .grid {
+      grid-template-columns: 1fr;
+    }
 
     .text-menu {
         display: none;
